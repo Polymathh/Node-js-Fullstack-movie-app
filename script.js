@@ -8,7 +8,7 @@ const main = document.getElementById("section");
 const form = document.getElementById("form");
 const search = document.getElementById("query");
 
-returnMovies(APILINK)
+
 function returnMovies(url){
     fetch(url).then(res => res.json())
     .then( function(data){
@@ -62,5 +62,7 @@ form.addEventListener("submit", (e) => {
         search.value = "";
     }
 });
+
+returnMovies(APILINK)
 
 
